@@ -1,0 +1,17 @@
+CREATE table "tablename" ("coloumn""datatype""[constraint]")
+	some data type: char(size), varchar(size), number(size), date, number(size,d)
+
+INSERT INTO tablename  (first_column,...last_column)
+  values (first_value,...last_value)
+
+UPDATE tablename SET column=newvalue WHERE column=value
+
+SELECT * FROM whatever
+
+WHERE 
+
+For choosing, use LIKE syntax for regex
+
+MIN/MAX/SUM function
+
+

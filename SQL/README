@@ -6,12 +6,16 @@ INSERT INTO tablename  (first_column,...last_column)
 
 UPDATE tablename SET column=newvalue WHERE column=value
 
+DELETE FROM tablename [WHERE ...] not specifying cause delete whole table
+	DROP delete everything while TRUNCATE saves the structure
+
 SELECT * FROM whatever
 
-WHERE 
-
+	WHERE 
+	SELECT * FROM albums LEFT JOIN artists ON albums.artist_id=artists.id;
 For choosing, use LIKE syntax for regex
 
-MIN/MAX/SUM function
-
+MIN/MAX/SUM/AVG/COUNT function
+	when COUNT(*) , return number of row
+	ROUND(col, num), return values in column in decimal places
 

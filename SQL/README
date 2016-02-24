@@ -11,9 +11,16 @@ DELETE FROM tablename [WHERE ...] not specifying cause delete whole table
 
 SELECT * FROM whatever
 
-	WHERE 
+	WHERE condition1 AND/OR condition2
+	WHERE col IN/NOTIN {set of cols}
+	WHERE value BETWEEN/NOTBETWEEN num1 AND num2
+
 	SELECT * FROM albums LEFT JOIN artists ON albums.artist_id=artists.id;
 For choosing, use LIKE syntax for regex
+
+-WHERE determine before aggregation, HAVING check after aggregation
+
+-ORDER BY caluse syntax[ ASC/ DESC ]
 
 Another Example:
 	SELECT
@@ -31,4 +38,7 @@ Another Example:
 MIN/MAX/SUM/AVG/COUNT function
 	when COUNT(*) , return number of row
 	ROUND(col, num), return values in column in decimal places
-
+	ROUND by default rounds to nearest int
+more function
+	ABS/MOD/FLOOR/CEIL/POWER(x, y)/SQRT
+	SIGN	<-	return the sign of input

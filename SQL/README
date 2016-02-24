@@ -15,6 +15,19 @@ SELECT * FROM whatever
 	SELECT * FROM albums LEFT JOIN artists ON albums.artist_id=artists.id;
 For choosing, use LIKE syntax for regex
 
+Another Example:
+	SELECT
+	  albums.name AS 'Album',
+	    albums.year,
+	      artists.name AS 'Artist'
+	      FROM
+	        albums
+		JOIN artists ON
+		  albums.artist_id = artists.id
+		  WHERE
+		    albums.year > 1980;
+
+
 MIN/MAX/SUM/AVG/COUNT function
 	when COUNT(*) , return number of row
 	ROUND(col, num), return values in column in decimal places

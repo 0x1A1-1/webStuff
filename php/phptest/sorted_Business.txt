@@ -1,0 +1,49 @@
+Serial Number: 0000000000330371
+Language: EUG
+Business Name: Big Banks R US
+Business Code: 240ACXRN
+Authorization Code: EC2CTCNL
+Timestamp: 2014-12-12 12:12:00
+
+Serial Number: 0000000000300541
+Language: FRE
+Business Name: Karen's Kitty Supplies
+Business Code: 240ACESN
+Authorization Code: EC2XTUNL
+Timestamp: 2014-12-12 12:12:00
+
+Serial Number: 0000000000390579
+Language: EUG
+Business Name: Paul's Dinner
+Business Code: 240ACYRN
+Authorization Code: EC2CTANL
+Timestamp: 2014-12-12 12:12:00
+
+Serial Number: 0000000000330871
+Language: DEU
+Business Name: Sleepy Bears
+Business Code: 240ACLRN
+Authorization Code: EC2CTDNL
+Timestamp: 2014-12-12 12:12:00
+
+Serial Number: 0000000000000001
+Language: ENU
+Business Name: Steve's Pizza Place
+Business Code: 240AUBC2
+Authorization Code: 's Pizza
+Timestamp: Place240AUBC2CNCERUNL2014-12-12 12:12:00
+
+Serial Number: 0000000000000571
+Language: JAP
+Business Name: The Lucky Dragon
+Business Code: 240CERON
+Authorization Code: EC2CTANL
+Timestamp: 2014-12-12 12:12:00
+
+Serial Number: 0000000000330331
+Language: EUG
+Business Name: Trouble Two Shot
+Business Code: 240ACJRN
+Authorization Code: EC2CXUNL
+Timestamp: 2014-12-12 12:12:00
+

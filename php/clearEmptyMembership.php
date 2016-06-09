@@ -1,3 +1,4 @@
+<?php
 function clearEmptyMembership(){
 		$userMemQuery = makeSQLQuery("SELECT user, membership FROM security_user_membership");
 		while ($row = $userMemQuery ->fetch(PDO::FETCH_BOTH)) {
@@ -21,3 +22,4 @@ function clearEmptyMembership(){
 			}
 		}
 	}
+?>

@@ -22,3 +22,29 @@
 //   var lines = contents.toString().split('\n').length - 1
 //   console.log(lines)
 // })
+
+//5. Async Read path with extension
+// var fs = require('fs');
+// var path = require('path');
+// var addr = process.argv[2];
+// var extension = process.argv[3];
+//
+// fs.readdir(addr, function(err, list){
+//   for(var i=0; i<list.length; i++){
+//     if( extension==undefined || path.extname(list[i]).substring(1)==extension){
+//       console.log(list[i]);
+//     }
+//   }
+// })
+
+
+var addr = process.argv[2];
+var extension = process.argv[3];
+var myModule = require('./readdirMod.js');
+myModule(addr, extension, function(err, data){
+  if (err) {
+    console.log(err);
+    return;
+  }
+  console.log(data); 
+});

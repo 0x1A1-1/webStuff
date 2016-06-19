@@ -37,14 +37,15 @@
 //   }
 // })
 
-
-var addr = process.argv[2];
-var extension = process.argv[3];
-var myModule = require('./readdirMod.js');
-myModule(addr, extension, function(err, data){
-  if (err) {
-    console.log(err);
-    return;
-  }
-  console.log(data); 
-});
+// 6. Modulerize
+// var addr = process.argv[2];
+// var extension = process.argv[3];
+// var myModule = require('./readdirMod.js');
+// myModule(addr, extension, function(err, list){
+//   if(err){
+//     console.error("Hey Something is wrong");
+//   }
+//   list.forEach(function(file){
+//     console.log(file);
+//   })
+// })

@@ -7,11 +7,10 @@ module.exports = function printDir(addr, extension, callback){
     if(err){
       return callback(err);
     }else{
-      for(var i=0; i<list.length ; i++){
-        if( extension==undefined || path.extname(list[i]).substring(1)==extension){
-          callback(list[i]);
-        }
-      }
+      list = list.filter(function (file) {
+                if(path.extname(file) === '.' + extension) return true;
+            })
+      return callback(null, list);
     }
   })
 }

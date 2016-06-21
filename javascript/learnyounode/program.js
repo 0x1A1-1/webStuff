@@ -49,3 +49,58 @@
 //     console.log(file);
 //   })
 // })
+
+//7.HTTP Client
+// var http = require('http');
+// var addr = process.argv[2];
+// http.get(addr, function(resource){
+//   resource.setEncoding('utf8');
+//   resource.on('data', (chunk)=>{
+//     console.log(chunk);
+//   })
+// })
+
+// 8.HTTP Collection
+// var http = require('http');
+// var addr = process.argv[2];
+// http.get(addr, function(resource){
+//   resource.setEncoding('utf8');
+//   var chars = 0;
+//   var completeString = ""
+//   resource.on('data', (chunk)=>{
+//     chars += chunk.length
+//     completeString += chunk
+//   });
+//   resource.on('end', ()=>{
+//     console.log(chars);
+//     console.log(completeString);
+//   })
+// });
+
+// 8.2 Third party package collection
+// var http = require('http');
+// var bl = require('bl');
+// var addr = process.argv[2];
+// http.get(addr, (response)=>{
+//     response.pipe(bl(function(err, data){
+//       if(err){
+//         console.error("Something's wrong");
+//       }
+//       console.log(data.toString().length);
+//       console.log(data.toString());
+//     }))
+//   });
+
+var http = require('http');
+var bl = require('bl');
+var finished = 0;
+for(var i=2; i<5; i++){
+  http.get(process.argv[i], (response)=>{
+    response.pipe(bl(function(err,data){
+      if (err) {
+        console.error("Something's wrong");
+      }
+        console.log(data.toString());
+    }))
+  })
+}

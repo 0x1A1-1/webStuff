@@ -91,16 +91,54 @@
 //     }))
 //   });
 
-var http = require('http');
-var bl = require('bl');
-var finished = 0;
-for(var i=2; i<5; i++){
-  http.get(process.argv[i], (response)=>{
-    response.pipe(bl(function(err,data){
-      if (err) {
-        console.error("Something's wrong");
-      }
-        console.log(data.toString());
-    }))
-  })
+//my answer wont work
+// var http = require('http');
+// var bl = require('bl');
+// var finished = 0;
+// var message = [];
+// for(var i=2; i<5; i++){
+//   http.get(process.argv[i], (response)=>{
+//     response.setEncoding('utf8');
+//     var messagePiece;
+//     response.on('data', function(chunk){
+//              messagePiece += chunk;
+//         });
+//     response.on('end', function(chunk){
+//            message[finished] = messagePiece;
+//            finished ++;
+//            if(finished==3)  {
+//              message.forEach(function(line){
+//                console.log(line);
+//            })
+//          }
+//        });
+//     })
+//   }
+
+var http = require('http')
+var bl = require('bl')
+var results = []
+var count = 0
+
+function printResults () {
+ for (var i = 0; i < 3; i++)
+   console.log(results[i])
 }
+
+function httpGet (index) {
+ http.get(process.argv[2 + index], function (response) {
+   response.pipe(bl(function (err, data) {
+     if (err)
+       return console.error(err)
+
+     results[index] = data.toString()
+     count++
+
+     if (count == 3)
+       printResults()
+   }))
+ })
+}
+
+for (var i = 0; i < 3; i++)  
+ httpGet(i)
